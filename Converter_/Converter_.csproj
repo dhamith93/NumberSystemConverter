@@ -118,7 +118,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <Resource Include="SourceCodePro-Regular_0.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

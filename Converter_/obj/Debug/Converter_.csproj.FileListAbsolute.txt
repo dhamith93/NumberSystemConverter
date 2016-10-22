@@ -30,3 +30,4 @@ C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Debug\Win
 C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Debug\Converter_.g.resources
 C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Debug\Converter_.Properties.Resources.resources
 C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Debug\Converter_.csproj.GenerateResource.Cache
+C:\Users\Dhamith Hewamullage\Source\Repos\NumberSystemConverter\Converter_\bin\Debug\NumberSystemConverter.exe.config

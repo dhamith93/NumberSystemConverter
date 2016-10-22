@@ -20,7 +20,6 @@ namespace Converter_ {
         public Window1() {
             InitializeComponent();
             textBox.IsReadOnly = true;
-            textBox_Copy.IsReadOnly = true;
         }
     }
 }
