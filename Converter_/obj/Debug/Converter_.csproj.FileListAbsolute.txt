@@ -1,0 +1,32 @@
+c:\users\dhamith hewamullage\documents\visual studio 2015\Projects\Converter_\Converter_\bin\Debug\Converter_.exe.config
+c:\users\dhamith hewamullage\documents\visual studio 2015\Projects\Converter_\Converter_\bin\Debug\Converter_.exe
+c:\users\dhamith hewamullage\documents\visual studio 2015\Projects\Converter_\Converter_\bin\Debug\Converter_.pdb
+c:\users\dhamith hewamullage\documents\visual studio 2015\Projects\Converter_\Converter_\obj\Debug\Converter_.csprojResolveAssemblyReference.cache
+c:\users\dhamith hewamullage\documents\visual studio 2015\Projects\Converter_\Converter_\obj\Debug\MainWindow.g.cs
+c:\users\dhamith hewamullage\documents\visual studio 2015\Projects\Converter_\Converter_\obj\Debug\App.g.cs
+c:\users\dhamith hewamullage\documents\visual studio 2015\Projects\Converter_\Converter_\obj\Debug\Converter__MarkupCompile.cache
+c:\users\dhamith hewamullage\documents\visual studio 2015\Projects\Converter_\Converter_\obj\Debug\Converter__MarkupCompile.lref
+c:\users\dhamith hewamullage\documents\visual studio 2015\Projects\Converter_\Converter_\obj\Debug\MainWindow.baml
+c:\users\dhamith hewamullage\documents\visual studio 2015\Projects\Converter_\Converter_\obj\Debug\Converter_.g.resources
+c:\users\dhamith hewamullage\documents\visual studio 2015\Projects\Converter_\Converter_\obj\Debug\Converter_.Properties.Resources.resources
+c:\users\dhamith hewamullage\documents\visual studio 2015\Projects\Converter_\Converter_\obj\Debug\Converter_.csproj.GenerateResource.Cache
+c:\users\dhamith hewamullage\documents\visual studio 2015\Projects\Converter_\Converter_\obj\Debug\Converter_.exe
+c:\users\dhamith hewamullage\documents\visual studio 2015\Projects\Converter_\Converter_\obj\Debug\Converter_.pdb
+C:\Users\Dhamith Hewamullage\Documents\Visual Studio 2015\Projects\Converter_\Converter_\obj\Debug\Window1.g.cs
+C:\Users\Dhamith Hewamullage\Documents\Visual Studio 2015\Projects\Converter_\Converter_\obj\Debug\Window1.baml
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\bin\Debug\Converter_.exe.config
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Debug\Converter_.exe
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Debug\Converter_.pdb
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\bin\Debug\Converter_.exe
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\bin\Debug\Converter_.pdb
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Debug\Converter_.csprojResolveAssemblyReference.cache
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Debug\MainWindow.g.cs
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Debug\Window1.g.cs
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Debug\App.g.cs
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Debug\Converter__MarkupCompile.cache
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Debug\Converter__MarkupCompile.lref
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Debug\MainWindow.baml
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Debug\Window1.baml
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Debug\Converter_.g.resources
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Debug\Converter_.Properties.Resources.resources
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Debug\Converter_.csproj.GenerateResource.Cache

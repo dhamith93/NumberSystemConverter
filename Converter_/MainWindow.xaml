@@ -1,0 +1,25 @@
+﻿<Window x:Class="Converter_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Converter_"
+        mc:Ignorable="d"
+        Title="Converter" Height="461" Width="903.614" ResizeMode="CanMinimize">
+    <Grid Margin="0,0,0,-3">
+        <Label x:Name="label" Content="Decimal" HorizontalAlignment="Left" Margin="33,40,0,0" VerticalAlignment="Top" Height="50" Width="99" FontSize="24"/>
+        <Label x:Name="label1" Content="Binary" HorizontalAlignment="Left" Margin="33,121,0,0" VerticalAlignment="Top" Height="51" Width="82" FontSize="24"/>
+        <Label x:Name="label3" Content="Octal" HorizontalAlignment="Left" Margin="33,204,0,0" VerticalAlignment="Top" Height="50" Width="70" FontSize="24"/>
+        <Label x:Name="label2" Content="Hexa" HorizontalAlignment="Left" Margin="33,284,0,0" VerticalAlignment="Top" Height="50" Width="74" FontSize="24"/>
+        <TextBox x:Name="dec" HorizontalAlignment="Left" Height="40" Margin="141,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="596" FontFamily="Source Code Pro Regular" FontSize="24" />
+        <TextBox x:Name="bin" HorizontalAlignment="Left" Height="40" Margin="141,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="596" FontFamily="Source Code Pro Regular" FontSize="24" />
+        <TextBox x:Name="oct" HorizontalAlignment="Left" Height="40" Margin="141,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="596" FontFamily="Source Code Pro Regular" FontSize="24" />
+        <TextBox x:Name="hex" HorizontalAlignment="Left" Height="40" Margin="141,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="596" FontFamily="Source Code Pro Regular" FontSize="24" />
+        <Button x:Name="buttonClear" Content="Clear" Margin="638,0,29,32" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="90" Height="36" FontSize="18"/>
+        <Button x:Name="about" Content="About" Margin="42,0,625,32" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="90" Height="36" FontSize="19" />
+        <Button x:Name="copy1" Content="Copy" HorizontalAlignment="Left" Margin="794,44,0,0" VerticalAlignment="Top" Width="74" Height="40"/>
+        <Button x:Name="copy2" Content="Copy" HorizontalAlignment="Left" Margin="794,125,0,0" VerticalAlignment="Top" Width="74" Height="40"/>
+        <Button x:Name="copy3" Content="Copy" HorizontalAlignment="Left" Margin="794,207,0,0" VerticalAlignment="Top" Width="74" Height="40"/>
+        <Button x:Name="copy4" Content="Copy" HorizontalAlignment="Left" Margin="794,288,0,0" VerticalAlignment="Top" Width="74" Height="40"/>
+    </Grid>
+</Window>

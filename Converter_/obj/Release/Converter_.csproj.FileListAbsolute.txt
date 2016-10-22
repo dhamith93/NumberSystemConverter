@@ -1,0 +1,31 @@
+C:\Users\Dhamith Hewamullage\Documents\Visual Studio 2015\Projects\Converter_\Converter_\bin\Release\Converter_.exe.config
+C:\Users\Dhamith Hewamullage\Documents\Visual Studio 2015\Projects\Converter_\Converter_\bin\Release\Converter_.exe
+C:\Users\Dhamith Hewamullage\Documents\Visual Studio 2015\Projects\Converter_\Converter_\bin\Release\Converter_.pdb
+C:\Users\Dhamith Hewamullage\Documents\Visual Studio 2015\Projects\Converter_\Converter_\obj\Release\MainWindow.g.cs
+C:\Users\Dhamith Hewamullage\Documents\Visual Studio 2015\Projects\Converter_\Converter_\obj\Release\Window1.g.cs
+C:\Users\Dhamith Hewamullage\Documents\Visual Studio 2015\Projects\Converter_\Converter_\obj\Release\App.g.cs
+C:\Users\Dhamith Hewamullage\Documents\Visual Studio 2015\Projects\Converter_\Converter_\obj\Release\Converter__MarkupCompile.cache
+C:\Users\Dhamith Hewamullage\Documents\Visual Studio 2015\Projects\Converter_\Converter_\obj\Release\Converter__MarkupCompile.lref
+C:\Users\Dhamith Hewamullage\Documents\Visual Studio 2015\Projects\Converter_\Converter_\obj\Release\MainWindow.baml
+C:\Users\Dhamith Hewamullage\Documents\Visual Studio 2015\Projects\Converter_\Converter_\obj\Release\Window1.baml
+C:\Users\Dhamith Hewamullage\Documents\Visual Studio 2015\Projects\Converter_\Converter_\obj\Release\Converter_.g.resources
+C:\Users\Dhamith Hewamullage\Documents\Visual Studio 2015\Projects\Converter_\Converter_\obj\Release\Converter_.Properties.Resources.resources
+C:\Users\Dhamith Hewamullage\Documents\Visual Studio 2015\Projects\Converter_\Converter_\obj\Release\Converter_.csproj.GenerateResource.Cache
+C:\Users\Dhamith Hewamullage\Documents\Visual Studio 2015\Projects\Converter_\Converter_\obj\Release\Converter_.exe
+C:\Users\Dhamith Hewamullage\Documents\Visual Studio 2015\Projects\Converter_\Converter_\obj\Release\Converter_.pdb
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Release\MainWindow.g.cs
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Release\Window1.g.cs
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Release\App.g.cs
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Release\MainWindow.baml
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Release\Window1.baml
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Release\Converter_.csproj.GenerateResource.Cache
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Release\Converter_.csprojResolveAssemblyReference.cache
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\bin\Release\NumberSystemConverter.exe.config
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Release\NumberSystemConverter_MarkupCompile.cache
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Release\NumberSystemConverter_MarkupCompile.lref
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\bin\Release\NumberSystemConverter.exe
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\bin\Release\NumberSystemConverter.pdb
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Release\NumberSystemConverter.g.resources
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Release\NumberSystemConverter.Properties.Resources.resources
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Release\NumberSystemConverter.exe
+C:\Users\Dhamith Hewamullage\Desktop\TEMP\C#\Converter_\Converter_\obj\Release\NumberSystemConverter.pdb
