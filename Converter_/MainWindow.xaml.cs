@@ -149,7 +149,7 @@ namespace Converter_ {
                     x[k] = a[i] - '0';
                     if (x[k] > 7 | x[k] < 0) {
                         clear();
-                        MessageBox.Show("Invalid input!\n" + a + " is not a octal number");
+                        MessageBox.Show("Invalid input!\n" + a + " is not an octal number");
                         break;
                     }
                     k++;
@@ -257,7 +257,6 @@ namespace Converter_ {
                 for (int i = f; i >= 0; i--) { 
                     oct.AppendText(c[i].ToString());                   
                 }
-                Array.Reverse(c);
             }
         }
 
