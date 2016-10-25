@@ -19,8 +19,8 @@ namespace Converter_ {
         public MainWindow() {
             InitializeComponent();
             Title = "Number System Converter v2.3";
-            buttonClear.Click += clearAll; // Clear every textbox
-            about.Click += aboutApp; // About button
+            buttonClear.Click += clearAll;
+            about.Click += aboutApp;
             copy1.Click += clickCopy1;
             copy2.Click += clickCopy2;
             copy3.Click += clickCopy3;
