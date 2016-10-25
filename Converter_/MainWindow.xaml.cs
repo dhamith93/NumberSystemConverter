@@ -1,17 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
+//using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+//using System.Text;
+//using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
+//using System.Windows.Controls;
+//using System.Windows.Data;
+//using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+//using System.Windows.Media;
+//using System.Windows.Media.Imaging;
+//using System.Windows.Navigation;
+//using System.Windows.Shapes;
 
 namespace Converter_ { 
     public partial class MainWindow : Window {
@@ -46,6 +46,12 @@ namespace Converter_ {
 
         private void clearAll(object sender, RoutedEventArgs e) {
             clear();
+        }
+        
+        // About button
+        public void aboutApp(object sender, RoutedEventArgs e) {            
+            Window1 win2 = new Window1();
+            win2.Show();
         }
 
         // Clears every textbox
@@ -87,13 +93,7 @@ namespace Converter_ {
                 hexConvert(dec1);
             }
         }     
-
-        // About button
-        public void aboutApp(object sender, RoutedEventArgs e) {
-            Window1 win2 = new Window1();            
-            win2.Show();
-        }
-
+        
         // Decimal to other 
         private void decConvert(string a) {
             try {                 
