@@ -18,7 +18,7 @@ namespace Converter_ {
         string dec1;
         public MainWindow() {
             InitializeComponent();
-            Title = "Number System Converter v2.2 rel ";
+            Title = "Number System Converter v2.3";
             buttonClear.Click += clearAll; // Clear every textbox
             about.Click += aboutApp; // About button
             copy1.Click += clickCopy1;
@@ -126,7 +126,7 @@ namespace Converter_ {
                 }
                 for (int y = 0; y <= k; y++) {
                     if (x[y] == 1) {
-                        sum = sum + powers(y, 2);
+                        sum = sum + (long)(Math.Pow(2, y));
                     }
                 }                
                 dec.Text = sum.ToString();
@@ -156,7 +156,7 @@ namespace Converter_ {
                 }
                 for (int i = 0; i <= k; i++) {
                     if (c >= 2) {
-                        sum = sum + (x[c] * powers(c, 8));
+                        sum = sum + (x[c] * (long)(Math.Pow(8, c)));
                     } else if (c == 1) {
                         sum = sum + (x[c] * 8);
                     } else if (c == 0) {
@@ -209,7 +209,7 @@ namespace Converter_ {
                 Array.Reverse(y);
                 for (int i = y.Length - 1; i >= 0; i--) {
                     if (i > 1) {
-                        sum = sum + (y[i] * powers(i, 16));
+                        sum = sum + (y[i] * (long)(Math.Pow(16, i)));
                     } else if (i == 1) {
                         sum = sum + (y[i] * 16);
                     } else if (i == 0) {
@@ -360,35 +360,7 @@ namespace Converter_ {
                 bin.Text = "0";
             }            
         }
-
-        // Calculating the powers for bin/oct/hex
-        private long powers(long x, int y) {
-            int i = 2, a = 0;
-            long sum = 1;
-            if (y == 2) {
-                sum = 1;
-                a = 2;
-                i = 1;
-            } else if (y == 8) {
-                sum = 8;
-                a = 8;
-            } else if (y == 16) {
-                sum = 16;
-                a = 16;
-            }
-            if (y > 7) {
-                for (i = 2; i <= x; i++) {
-                    sum = sum * a;
-                }
-            } else {
-                while (i <= x) {
-                    sum = a * sum;
-                    i++;
-                }
-            }
-            return sum;
-        }
-        
+                
         //Closing the app         
         protected override void OnClosed(EventArgs e) {            
             Application.Current.Shutdown();
