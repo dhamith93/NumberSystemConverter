@@ -1,17 +1,17 @@
 ﻿using System;
-//using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
-//using System.Windows.Controls;
-//using System.Windows.Data;
-//using System.Windows.Documents;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
 using System.Windows.Input;
-//using System.Windows.Media;
-//using System.Windows.Media.Imaging;
-//using System.Windows.Navigation;
-//using System.Windows.Shapes;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
 namespace Converter_ { 
     public partial class MainWindow : Window {
@@ -48,45 +48,46 @@ namespace Converter_ {
             clear();
         }
         
-        // About button
+        // About
         public void aboutApp(object sender, RoutedEventArgs e) {            
             Window1 win2 = new Window1();
             win2.Show();
         }
-
-        // Clears every textbox
+        
         private void clear() {
             dec.Clear();
             bin.Clear();
             oct.Clear();
             hex.Clear();
         }              
-
-        // Decimal 
+        
         private void decKeyDown(object sender, KeyEventArgs e) {
             if(e.Key == Key.Enter) {
-                dec1 = dec.Text;
-                decConvert(dec1);
+                long dec2;
+                bool num = long.TryParse(dec.Text, out dec2);
+                if (num) {
+                    decConvert(dec2);
+                } else {
+                    MessageBox.Show("Invalid input!\n" + dec.Text + " is not a binary number", "Error", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                    clear();
+                }
             }
         }
-
-        // Binary
+        
         private void binKeyDown(object sender, KeyEventArgs e) {
             if (e.Key == Key.Enter) {
                 dec1 = bin.Text;
                 binConvert(dec1);
             }
         }
-
-        //Octal
+        
         private void octKeyDown(object sender, KeyEventArgs e) {
             if (e.Key == Key.Enter) {
                 dec1 = oct.Text;
                 octConvert(dec1);
             }
         }
-
-        // Hexadecimal
+        
         private void hexKeyDown(object sender, KeyEventArgs e) {
             if (e.Key == Key.Enter) {
                 dec1 = hex.Text;
@@ -94,19 +95,21 @@ namespace Converter_ {
             }
         }     
         
+        //Conversions -->
+
         // Decimal to other 
-        private void decConvert(string a) {
-            try {                 
-                decBin(a);
-                decHex(a);
-                decOct(a);
+        private void decConvert(long b) {
+            try {
+                decBin(b);
+                decOct(b);
+                decHex(b);
             } catch (Exception e) {
-                MessageBox.Show("Program encountered an error: " + e.Message);
+                MessageBox.Show("Program encountered an error: " + e.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
         }
 
-        // Binary to other
+        // Binary to dec
         private void binConvert(string a) {
             try {
                 int[] x = new int[a.Length + 1]; 
@@ -114,7 +117,7 @@ namespace Converter_ {
                 for (int i = a.Length - 1; i >= 0; i--) {
                     x[k] = a[i] - '0';
                     if (x[k] > 1 | x[k] < 0) {
-                        MessageBox.Show("Invalid input!\n" + a + " is not a binary number");
+                        MessageBox.Show("Invalid input!\n" + a + " is not a binary number", "Error", MessageBoxButton.OK, MessageBoxImage.Exclamation);
                         clear();
                         break;
                     }
@@ -131,52 +134,51 @@ namespace Converter_ {
                 }                
                 dec.Text = sum.ToString();
                 // To convert the just binary-to-decimal converted number to other format; calls following methods:
-                decOct(sum.ToString()); 
-                decHex(sum.ToString());                
+                decOct(sum); 
+                decHex(sum);                
             }
             catch (Exception e) {
-                MessageBox.Show("Program encountered an error: " + e.Message);
+                MessageBox.Show("Program encountered an error: " + e.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
-        //Oct to all
+        //Oct to dec
         private void octConvert(string a) {
             try {
                 int[] x = new int[a.Length + 1];
-                int k = 0, c = 0;
+                int k = 0;
                 long sum = 0;
                 for (int i = a.Length - 1; i >= 0; i--) {
-                    x[k] = a[i] - '0';
-                    if (x[k] > 7 | x[k] < 0) {
-                        clear();
-                        MessageBox.Show("Invalid input!\n" + a + " is not an octal number");
-                        break;
-                    }
+                    x[k] = a[i] - '0';                    
                     k++;
                 }
-                for (int i = 0; i <= k; i++) {
-                    if (c >= 2) {
-                        sum = sum + (x[c] * (long)(Math.Pow(8, c)));
-                    } else if (c == 1) {
-                        sum = sum + (x[c] * 8);
-                    } else if (c == 0) {
-                        sum = sum + (x[c] * 1);
+                for (int i = 0; i <= a.Length - 1; i++) {
+                    if (x[i] > 7 | x[i] < 0) {
+                        clear();
+                        MessageBox.Show("Invalid input!\n" + a + " is not an octal number", "Error", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                        break;
                     }
-                    c++;
+                    if (i >= 2) {
+                        sum = sum + (x[i] * (long)(Math.Pow(8, i)));
+                    } else if (i == 1) {
+                        sum = sum + (x[i] * 8);
+                    } else if (i == 0) {
+                        sum = sum + (x[i] * 1);
+                    }
                 }
                 if (true) {
                     dec.Text = sum.ToString();
                     // To convert the just octal-to-decimal converted number to other format; calls following methods:
-                    decBin(sum.ToString());
-                    decHex(sum.ToString());
+                    decBin(sum);
+                    decHex(sum);
                 }
             }
             catch (Exception e) {
-                MessageBox.Show("Program encountered an error: " + e.Message);
+                MessageBox.Show("Program encountered an error: " + e.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
-        //HEX to all
+        //HEX to dec
         private void hexConvert(string a) {
             try {
                 bool check = true;
@@ -200,12 +202,11 @@ namespace Converter_ {
                     if (o > 22 | o < 0) {
                         check = false; 
                         clear();
-                        MessageBox.Show("Invalid input!\n" + a + " is not a hexadecimal number");
+                        MessageBox.Show("Invalid input!\n" + a + " is not a hexadecimal number", "Error", MessageBoxButton.OK, MessageBoxImage.Exclamation);
                         break;
                     }
                     c++;
                 }
-
                 Array.Reverse(y);
                 for (int i = y.Length - 1; i >= 0; i--) {
                     if (i > 1) {
@@ -219,22 +220,60 @@ namespace Converter_ {
                 if (check) { //If the number does not contain a non-hexa number/character
                     dec.Text = sum.ToString();
                     // To convert the just hexadecimal-to-decimal converted number to other format; calls following methods:
-                    decOct(sum.ToString());
-                    decHex(sum.ToString()); // This will display the hexa number user entered with uppercase A->F
-                    decBin(sum.ToString());
+                    decOct(sum);
+                    decHex(sum); // This will display the hexa number user entered with uppercase A->F
+                    decBin(sum);
                 }
             }
             catch (Exception e) {
-                MessageBox.Show("Program encountered an error: " + e.Message);
+                MessageBox.Show("Program encountered an error: " + e.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-        }  
-        
-        //  Dec > oct
-        private void decOct(string a) {            
+        }
+
+        // Dec -> bin
+        private void decBin(long a) {
+            bool check = false;
+            if (a == 0) {
+                check = true;
+            }
+            long[] output = new long[64];
+            long count = 0;
+            int i = 0;
+            while (true) {
+                if (a % 2 == 1) {
+                    count = 1;
+                } else if (a % 2 == 0) {
+                    count = 0;
+                }
+                output[i] = count;
+                a = a / 2;
+                if (a < 1) {
+                    break;
+                }
+                i++;
+            }
+            output[i] = 1;
+            long[] binArray = new long[i + 1];
+            int l = 0;
+            for (int j = i; j >= 0; j--) {
+                binArray[l] = output[j];
+                l++;
+            }
+            bin.Text = null;
+            if (!check) {
+                for (int f = 0; f < binArray.Length; f++) {
+                    bin.AppendText(binArray[f].ToString());
+                }
+            } else {
+                bin.Text = "0";
+            }
+        }
+
+        //  Dec -> oct
+        private void decOct(long decOne) {            
             int f = 0;
-            long decOne = 0, count = 0;
-            long.TryParse(a.Trim(), out decOne);
-            long[] c = new long[64];
+            long count = 0;            
+            long[] c = new long[21];
             if (decOne < 8) {
                 oct.Text = decOne.ToString();
             } else {
@@ -250,23 +289,20 @@ namespace Converter_ {
                         break;
                     }
                     f++;
-                }
-                
-                oct.Text = null;                
-                //For insted of foreach to avoid displaying c[0] which is 0 -- find a solution!
+                }                
+                oct.Text = null;
                 for (int i = f; i >= 0; i--) { 
                     oct.AppendText(c[i].ToString());                   
                 }
             }
         }
 
-        // Dec > hex
-        private void decHex(string a) {            
-            string[] heX = new string[a.Length + 1];
+        // Dec -> hex
+        private void decHex(long decOne) {            
+            string[] heX = new string[16];
             char h = ' ';
             int f = 0;
-            long count = 0, decOne = 0;
-            long.TryParse(a, out decOne);
+            long count = 0;
             if (decOne < 10) {
                 hex.Text = decOne.ToString();
             } else if (decOne > 9 && decOne < 16) {
@@ -318,50 +354,7 @@ namespace Converter_ {
                 }
             }
         }
-
-        // Dec > bin
-        private void decBin(string a) {
-            long decOne = 0;
-            bool check = false;
-            long.TryParse(a, out decOne);
-            if (decOne == 0) {
-                check = true;
-            }
-            long[] output = new long[64];
-            long count = 0;
-            int i = 0;
-            while (true) {
-                if (decOne % 2 == 1) {
-                    count = 1;
-                } else if (decOne % 2 == 0) {
-                    count = 0;
-                }
-                output[i] = count;
-                decOne = decOne / 2;
-                if (decOne < 1) {
-                    break;
-                }
-                i++;
-            }
-            output[i] = 1;
-
-            long[] binArray = new long[i + 1];
-            int l = 0;
-            for (int j = i; j >= 0; j--) {
-                binArray[l] = output[j];
-                l++;
-            }            
-            bin.Text = null;
-            if(!check) {
-                for (int f = 0; f < binArray.Length; f++) {
-                    bin.AppendText(binArray[f].ToString());
-                }
-            } else {
-                bin.Text = "0";
-            }            
-        }
-                
-        //Closing the app         
+                        
         protected override void OnClosed(EventArgs e) {            
             Application.Current.Shutdown();
             base.OnClosed(e);
