@@ -45,3 +45,7 @@ C:\Users\Dhamith Hewamullage\Source\Repos\NumberSystemConverter\Converter_\obj\R
 C:\Users\Dhamith Hewamullage\Source\Repos\NumberSystemConverter\Converter_\obj\Release\NumberSystemConverter.g.resources
 C:\Users\Dhamith Hewamullage\Source\Repos\NumberSystemConverter\Converter_\obj\Release\NumberSystemConverter.Properties.Resources.resources
 C:\Users\Dhamith Hewamullage\Source\Repos\NumberSystemConverter\Converter_\obj\Release\Converter_.csproj.GenerateResource.Cache
+C:\Users\Dhamith Hewamullage\Source\Repos\NumberSystemConverter\Converter_\bin\Release\NumberSystemConverter.exe.manifest
+C:\Users\Dhamith Hewamullage\Source\Repos\NumberSystemConverter\Converter_\bin\Release\NumberSystemConverter.application
+C:\Users\Dhamith Hewamullage\Source\Repos\NumberSystemConverter\Converter_\obj\Release\NumberSystemConverter.exe.manifest
+C:\Users\Dhamith Hewamullage\Source\Repos\NumberSystemConverter\Converter_\obj\Release\NumberSystemConverter.application
