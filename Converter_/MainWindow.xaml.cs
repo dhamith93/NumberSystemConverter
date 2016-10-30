@@ -75,17 +75,16 @@ namespace Converter_
         {
             if (e.Key == Key.Enter)
             {
-                long dec2;
-                bool num = long.TryParse(dec.Text, out dec2);
-                if (num)
+                if (dec.Text.Any(Char.IsLetter))
                 {
-                    decConvert(dec2);
+                    MessageBox.Show("Invalid input!\n" + dec.Text + " is not a number", "Error", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                    clear();
                 }
                 else
                 {
-                    MessageBox.Show("Invalid input!\n" + dec.Text + " is not a binary number", "Error", MessageBoxButton.OK, MessageBoxImage.Exclamation);
-                    clear();
-                }
+                    long dec2 = Convert.ToInt64(dec.Text);
+                    decConvert(dec2);
+                }                
             }
         }
         
@@ -229,7 +228,8 @@ namespace Converter_
             try
             {
                 bool check = true;
-                long sum = 0, c = 0;
+                long sum = 0;
+                int c = 0;
                 //Converts the string to an int array
                 int[] y = a.ToUpper().Select(s => Convert.ToInt32(s - 48)).ToArray();
                 foreach (int o in y)
@@ -307,8 +307,8 @@ namespace Converter_
             {
                 check = true;
             }
-            long[] output = new long[64];
-            long count = 0;
+            int[] output = new int[64];
+            int count = 0;
             int i = 0;
             while (true)
             {
@@ -329,19 +329,12 @@ namespace Converter_
                 i++;
             }
             output[i] = 1;
-            long[] binArray = new long[i + 1];
-            int l = 0;
-            for (int j = i; j >= 0; j--)
-            {
-                binArray[l] = output[j];
-                l++;
-            }
             bin.Text = null;
             if (!check)
             {
-                for (int f = 0; f < binArray.Length; f++)
+                for (int f = i; f >= 0; f--)
                 {
-                    bin.AppendText(binArray[f].ToString());
+                    bin.AppendText(output[f].ToString());
                 }
             }
             else
