@@ -24,7 +24,6 @@ namespace Converter_
             InitializeComponent();
             Title = "Number System Converter v2.3.5";
             buttonClear.Click += clearAll;
-            about.Click += aboutApp;
             copy1.Click += clickCopy1;
             copy2.Click += clickCopy2;
             copy3.Click += clickCopy3;
@@ -74,31 +73,38 @@ namespace Converter_
         
         private void decKeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Enter)
+            try
             {
-                if (dec.Text.Any(Char.IsLetter))
+                if (e.Key == Key.Enter)
                 {
-                    MessageBox.Show("Invalid input!\n" + dec.Text + " is not a number", "Error", MessageBoxButton.OK, MessageBoxImage.Exclamation);
-                    clear();
-                }
-                else
-                {
-                    long dec2;
-                    // Checks whether the decimal is a minus value:
-                    if (dec.Text[0] == '-')
+                    if (dec.Text.Any(Char.IsLetter))
                     {
-                        // Removes the "-" from the string before conversion:
-                        string x = dec.Text.Replace(@"-", "");
-                        dec2 = Convert.ToInt64(x);
-                        minDecCheck = true;
+                        MessageBox.Show("Invalid input!\n" + dec.Text + " is not a number", "Error", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                        clear();
                     }
                     else
                     {
-                        dec2 = Convert.ToInt64(dec.Text);
-                    }                    
-                    decConvert(dec2);
-                }                
-            }
+                        long dec2;
+                        // Checks whether the decimal is a minus value:
+                        if (dec.Text[0] == '-')
+                        {
+                            // Removes the "-" from the string before conversion:
+                            string x = dec.Text.Replace(@"-", "");
+                            dec2 = Convert.ToInt64(x);
+                            minDecCheck = true;
+                        }
+                        else
+                        {
+                            dec2 = Convert.ToInt64(dec.Text);
+                        }
+                        decConvert(dec2);
+                    }
+                }
+           } 
+           catch (OverflowException)
+           {
+                MessageBox.Show("Value you entered is too long! Please Enter a value between -9223372036854775807 and +9223372036854775807.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+           }
         }
         
         private void binKeyDown(object sender, KeyEventArgs e)
@@ -317,8 +323,7 @@ namespace Converter_
                 {
                     dec.Text = sum.ToString();
                     // To convert the just hexadecimal-to-decimal converted number to other format; calls following methods:
-                    decOct(sum);
-                    decHex(sum); // This will display the hexa number user entered with uppercase A->F
+                    decOct(sum);                    
                     decBin(sum);
                 }
             }

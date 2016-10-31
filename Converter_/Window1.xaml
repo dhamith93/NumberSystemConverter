@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Converter_"
         mc:Ignorable="d"
-        Title="About" Height="297.887" Width="414.225" ResizeMode="CanMinimize">
-    <Grid>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="192" Margin="14,9,0,0" TextWrapping="Wrap" Text="This is a number system converter. Enter the number you want to convert in to the appropriate text box and press 'Enter' on your keyboard. It will be converted in to all of the available number systems. Click on copy to copy the converted number. Click 'Clear' if you want to clear all text boxes. [Note] minus values: currently this only works with decimal and binary minus values.&#xA;&#x9;&#x9;&#x9;       &#x9;-- dhamith93&#xA;" 
-                 VerticalAlignment="Top" Width="374" FontSize="16" BorderBrush="White" Focusable="False" BorderThickness="0" Block.TextAlignment="Justify"/>
-        <Label x:Name="label" Content="Version 2.3.5 (10/31/2016)" HorizontalAlignment="Left" Margin="10,235,0,0" VerticalAlignment="Top" FontSize="12" FontFamily="Consolas"/>
+        Title="About" Height="276.77" Width="508.225" ResizeMode="CanMinimize">
+    <Grid Background="White">
+        <TextBox x:Name="textBox" Height="169" Margin="17,15,17,0" TextWrapping="Wrap" Text="This is a number system converter. Enter the number you want to convert in to the appropriate text box and press 'Enter' on your keyboard. It will be converted in to all of the available number systems. Click on copy to copy the converted number. Click 'Clear' if you want to clear all text boxes.&#xD;&#xA; &#xA;[Note] minus values: currently this only works with decimal and binary minus values.      &#x9;&#xD;&#xA;&#xD;&#xA;" 
+                 VerticalAlignment="Top" FontSize="16" BorderBrush="White" Focusable="False" BorderThickness="0" Block.TextAlignment="Justify" Background="{x:Null}" FontFamily="Trebuchet MS"/>
+        <Label x:Name="label" Content="Version 2.3.5 (10/31/2016)" HorizontalAlignment="Left" Margin="17,204,0,0" FontSize="16" FontFamily="Consolas" Height="34" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock"  VerticalAlignment="Top" Margin="382,163,17,0" FontSize="16"><Hyperlink NavigateUri="https://www.github.com/dhamith93" RequestNavigate="Hyperlink_RequestNavigate">--dhamith93</Hyperlink></TextBlock>
 
     </Grid>
 </Window>
