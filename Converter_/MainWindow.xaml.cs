@@ -393,6 +393,7 @@ namespace Converter_
                         }
                         else if (output[k] == 1 && k <= output.Length)
                         {
+                            k++;
                             continue;
                         }
                         k++;
