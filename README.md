@@ -12,3 +12,11 @@ Version 2.3:
 Version 2.2: 
             
             Added copy buttons to directly copy the result.             
+
+TODO:
+
+            Minus values:
+            -> Binary to octal and hexadecimal.
+            -> Decimal to octal and hexadecimal.
+            -> Octal to binary and hexadecimal.
+            -> Hexadecimal to binary and octal.
