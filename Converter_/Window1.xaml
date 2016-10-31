@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Converter_"
         mc:Ignorable="d"
-        Title="About" Height="259.836" Width="414.225" ResizeMode="CanMinimize">
+        Title="About" Height="297.887" Width="414.225" ResizeMode="CanMinimize">
     <Grid>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="175" Margin="14,9,0,0" TextWrapping="Wrap" Text="This is a number system converter. Enter the number you want to convert in to the appropriate text box and press 'Enter' on your keyboard. It will be converted in to all of the available number systems. Click on copy to copy the converted number. Click 'Clear' if you want to clear all text boxes. &#xA;&#x9;&#x9;&#x9;       &#x9;-- dhamith93&#xA;" 
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="192" Margin="14,9,0,0" TextWrapping="Wrap" Text="This is a number system converter. Enter the number you want to convert in to the appropriate text box and press 'Enter' on your keyboard. It will be converted in to all of the available number systems. Click on copy to copy the converted number. Click 'Clear' if you want to clear all text boxes. [Note] minus values: currently this only works with decimal and binary minus values.&#xA;&#x9;&#x9;&#x9;       &#x9;-- dhamith93&#xA;" 
                  VerticalAlignment="Top" Width="374" FontSize="16" BorderBrush="White" Focusable="False" BorderThickness="0" Block.TextAlignment="Justify"/>
-        <Label x:Name="label" Content="Version 2.3 (10/25/2016)" HorizontalAlignment="Left" Margin="10,193,0,0" VerticalAlignment="Top" FontSize="12" FontFamily="Consolas"/>
+        <Label x:Name="label" Content="Version 2.3.5 (10/31/2016)" HorizontalAlignment="Left" Margin="10,235,0,0" VerticalAlignment="Top" FontSize="12" FontFamily="Consolas"/>
 
     </Grid>
 </Window>

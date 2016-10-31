@@ -18,10 +18,11 @@ namespace Converter_
     public partial class MainWindow : Window
     {
         string dec1;
+        bool minDecCheck = false;
         public MainWindow()
         {
             InitializeComponent();
-            Title = "Number System Converter v2.3";
+            Title = "Number System Converter v2.3.5";
             buttonClear.Click += clearAll;
             about.Click += aboutApp;
             copy1.Click += clickCopy1;
@@ -82,7 +83,19 @@ namespace Converter_
                 }
                 else
                 {
-                    long dec2 = Convert.ToInt64(dec.Text);
+                    long dec2;
+                    // Checks whether the decimal is a minus value:
+                    if (dec.Text[0] == '-')
+                    {
+                        // Removes the "-" from the string before conversion:
+                        string x = dec.Text.Replace(@"-", "");
+                        dec2 = Convert.ToInt64(x);
+                        minDecCheck = true;
+                    }
+                    else
+                    {
+                        dec2 = Convert.ToInt64(dec.Text);
+                    }                    
                     decConvert(dec2);
                 }                
             }
@@ -122,9 +135,16 @@ namespace Converter_
         {
             try
             {
-                decBin(b);
-                decOct(b);
-                decHex(b);
+                if (minDecCheck) // is a minus
+                {
+                    decBin(b);
+                }
+                else
+                {
+                    decBin(b);
+                    decOct(b);
+                    decHex(b);
+                }
             }
             catch (Exception e)
             {
@@ -162,11 +182,20 @@ namespace Converter_
                     {
                         sum = sum + (long)(Math.Pow(2, y));
                     }
-                }                
-                dec.Text = sum.ToString();
-                // To convert the just binary-to-decimal converted number to other format; calls following methods:
-                decOct(sum); 
-                decHex(sum);                
+                }
+                if (sum < 0) // if the input binary is a minus
+                {
+                    oct.Clear();
+                    hex.Clear();
+                    dec.Text = sum.ToString(); 
+                }
+                else
+                {
+                    dec.Text = sum.ToString();
+                    // To convert the just binary-to-decimal converted number to other format; calls following methods:
+                    decOct(sum);
+                    decHex(sum);
+                }            
             }
             catch (Exception e)
             {
@@ -330,16 +359,66 @@ namespace Converter_
             }
             output[i] = 1;
             bin.Text = null;
-            if (!check)
+            // If the decimal is a minus value:
+            if (minDecCheck)
             {
-                for (int f = i; f >= 0; f--)
+                count = 0;
+                foreach (int o in output)
                 {
-                    bin.AppendText(output[f].ToString());
+                    if (o == 1)
+                    {
+                        output[count] = 0;
+                    }
+                    else
+                    {
+                        output[count] = 1;
+                    }
+                    count++;
                 }
+                int k = 1;
+                for (int j = 0; j < i; j++)
+                {
+                    if (output[j] == 0)
+                    {
+                        output[j] = 1;
+                        break;
+                    }
+                    else if (output[j] == 1)
+                    {
+                        output[j] = 0;
+                        if (output[k] == 0 && k <= output.Length)
+                        {
+                            output[k] = 1;
+                            break;
+                        }
+                        else if (output[k] == 1 && k <= output.Length)
+                        {
+                            continue;
+                        }
+                        k++;
+                    }
+                }
+                hex.Text = null;
+                oct.Text = null;
+                for (int j = output.Length - 1; j >= 0; j--)
+                {
+                    bin.AppendText(output[j].ToString());
+                }
+                minDecCheck = false;
             }
             else
             {
-                bin.Text = "0";
+                if (!check)
+                {
+                    for (int f = i; f >= 0; f--)
+                    {
+                        bin.AppendText(output[f].ToString());
+                    }
+                }
+                else
+                {
+                    bin.Text = "0";
+                }
             }
         }
 
