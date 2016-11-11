@@ -20,7 +20,7 @@
         <Button x:Name="copy2" Content="Copy" HorizontalAlignment="Left" Margin="524,141,0,0" VerticalAlignment="Top" Width="72" Height="27" FontFamily="Trebuchet MS" FontSize="14"/>
         <Button x:Name="copy3" Content="Copy" HorizontalAlignment="Left" Margin="524,223,0,0" VerticalAlignment="Top" Width="72" Height="27" FontFamily="Trebuchet MS" FontSize="14"/>
         <Button x:Name="copy4" Content="Copy" Margin="524,304,0,0" VerticalAlignment="Top" Height="27" HorizontalAlignment="Left" Width="72" FontFamily="Trebuchet MS" FontSize="14"/>
-        <Menu x:Name="menu" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="16" Width="630" BorderBrush="Black" BorderThickness="1" Height="26">
+        <Menu x:Name="menu" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="16" Width="630" BorderBrush="Black" BorderThickness="0,1" Height="26">
             <Menu.Background>
                 <SolidColorBrush Color="#FFF7F7F7" Opacity="0.25"/>
             </Menu.Background>
