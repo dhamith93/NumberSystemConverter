@@ -22,7 +22,7 @@ namespace Converter_
         public MainWindow()
         {
             InitializeComponent();
-            Title = "Number System Converter v2.3.5";
+            Title = "Number System Converter v2.3.6";
             buttonClear.Click += clearAll;
             copy1.Click += clickCopy1;
             copy2.Click += clickCopy2;

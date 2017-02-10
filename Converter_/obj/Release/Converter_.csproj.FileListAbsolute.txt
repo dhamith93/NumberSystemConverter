@@ -34,7 +34,6 @@ C:\Users\Dhamith Hewamullage\Source\Repos\NumberSystemConverter\Converter_\obj\R
 C:\Users\Dhamith Hewamullage\Source\Repos\NumberSystemConverter\Converter_\obj\Release\NumberSystemConverter.pdb
 C:\Users\Dhamith Hewamullage\Source\Repos\NumberSystemConverter\Converter_\bin\Release\NumberSystemConverter.exe
 C:\Users\Dhamith Hewamullage\Source\Repos\NumberSystemConverter\Converter_\bin\Release\NumberSystemConverter.pdb
-C:\Users\Dhamith Hewamullage\Source\Repos\NumberSystemConverter\Converter_\obj\Release\Converter_.csprojResolveAssemblyReference.cache
 C:\Users\Dhamith Hewamullage\Source\Repos\NumberSystemConverter\Converter_\obj\Release\MainWindow.g.cs
 C:\Users\Dhamith Hewamullage\Source\Repos\NumberSystemConverter\Converter_\obj\Release\Window1.g.cs
 C:\Users\Dhamith Hewamullage\Source\Repos\NumberSystemConverter\Converter_\obj\Release\App.g.cs
