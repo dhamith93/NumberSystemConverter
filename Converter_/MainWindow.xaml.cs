@@ -77,33 +77,37 @@ namespace Converter_
             {
                 if (e.Key == Key.Enter)
                 {
-                    if (dec.Text.Any(Char.IsLetter))
+                    if (dec.Text.Length > 0)
                     {
-                        MessageBox.Show("Invalid input!\n" + dec.Text + " is not a number", "Error", MessageBoxButton.OK, MessageBoxImage.Exclamation);
-                        clear();
-                    }
-                    else
-                    {
-                        long dec2;
-                        // Checks whether the decimal is a minus value:
-                        if (dec.Text[0] == '-')
+                        if (dec.Text.Any(Char.IsLetter))
                         {
-                            // Removes the "-" from the string before conversion:
-                            string x = dec.Text.Replace(@"-", "");
-                            dec2 = Convert.ToInt64(x);
-                            minDecCheck = true;
+                            MessageBox.Show("Invalid input!\n" + dec.Text + " is not a number", "Error", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                            clear();
                         }
                         else
                         {
-                            dec2 = Convert.ToInt64(dec.Text);
+                            long dec2;
+                            // Checks whether the decimal is a minus value:
+                            if (dec.Text[0] == '-')
+                            {
+                                // Removes the "-" from the string before conversion:
+                                string x = dec.Text.Replace(@"-", "");
+                                dec2 = Convert.ToInt64(x);
+                                minDecCheck = true;
+                            }
+                            else
+                            {
+                                dec2 = Convert.ToInt64(dec.Text);
+                            }
+                            decConvert(dec2);
                         }
-                        decConvert(dec2);
                     }
+                    
                 }
            } 
            catch (OverflowException)
            {
-                MessageBox.Show("Value you entered is too long! Please Enter a value between -9223372036854775807 and +9223372036854775807.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Please Enter a value between -9223372036854775807 and +9223372036854775807.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
            }
         }
         
@@ -111,8 +115,11 @@ namespace Converter_
         {
             if (e.Key == Key.Enter)
             {
-                dec1 = bin.Text;
-                binConvert(dec1);
+                if (bin.Text.Length > 0)
+                {
+                    dec1 = bin.Text;
+                    binConvert(dec1);
+                }                
             }
         }
         
@@ -120,8 +127,11 @@ namespace Converter_
         {
             if (e.Key == Key.Enter)
             {
-                dec1 = oct.Text;
-                octConvert(dec1);
+                if (oct.Text.Length > 0)
+                {
+                    dec1 = oct.Text;
+                    octConvert(dec1);
+                }
             }
         }
         
@@ -129,8 +139,12 @@ namespace Converter_
         {
             if (e.Key == Key.Enter)
             {
-                dec1 = hex.Text;
-                hexConvert(dec1);
+                if (hex.Text.Length > 0)
+                {
+                    dec1 = hex.Text;
+                    hexConvert(dec1);
+                }
+                
             }
         }     
         
