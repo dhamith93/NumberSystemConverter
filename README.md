@@ -5,6 +5,10 @@ A simple converter to convert between decimal-binary-octal-hexadecimal numbers.
 
 Version 2.3.5: 
 
+            Fixed app crash when pressing enter on empty textbox.
+
+Version 2.3.5: 
+
             Added the ability to convert minus decimal and binary values.
 
 Version 2.3:
