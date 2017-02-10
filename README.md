@@ -3,7 +3,7 @@ A simple converter to convert between decimal-binary-octal-hexadecimal numbers.
 
 [Linux version](https://github.com/dhamith93/NumberSystemConverterLinux) || [Web version](https://dhamith.me/converter/)
 
-Version 2.3.5: 
+Version 2.3.6: 
 
             Fixed app crash when pressing enter on empty textbox.
 
