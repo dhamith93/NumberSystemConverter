@@ -19,8 +19,9 @@ Version 2.2:
             
             Added copy buttons to directly copy the result.             
 
-###Screenshot:
-![Alt text](/screenshots/Capture.png?raw=true)
+### Screenshot:
+
+            ![Alt text](/screenshots/Capture.png?raw=true)
 
 TODO:
 
