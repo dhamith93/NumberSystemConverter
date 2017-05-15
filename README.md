@@ -21,7 +21,7 @@ Version 2.2:
 
 ### Screenshot:
 
-            ![Alt text](/screenshots/Capture.png?raw=true)
+![Alt text](/screenshots/Capture.png?raw=true)
 
 TODO:
 
